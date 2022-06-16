@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 
 <div class="container">
 
@@ -9,16 +12,10 @@
         </div>
     </div>
     <div class="row text-start">
-        <div class="pull-right py-2">
-            <a href="" class="btn btn-success "> Add New Comic</a>
+        <div class="pull-right py-4">
+            <a href="{{route('comics.create')}}" class="btn btn-success "> Add New Comic</a>
         </div>
     </div>
-
-    @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
-    @endif
 
     <table class="table table-striped">
         <tr>
@@ -33,10 +30,10 @@
             <th>Options</th>
         </tr>
 
-        @foreach($comics as $comic)
+        @foreach( $comics as $comic)
         <tr>
             <td>{{$comic->id}}</td>
-            <td>{{$comic->img}}</td>
+            <td><img src="{{$comic->thumb}}" alt=""></td>
             <td>{{$comic->title}}</td>
             <td>{{$comic->description}}</td>
             <td>{{$comic->sale_date}}</td>
@@ -44,14 +41,13 @@
             <td>{{$comic->type}}</td>
             <td>{{$comic->price}}</td>
             <td>
-                <form method="POST" action="{{ route('comic.destroy', $comic->id) }}">
-                    {{ csrf_field }}
-                    {{ method_field('DELETE') }}
-                    <input type="submit" class="btn btn-danger delete-user" value="Delete">
-                </form>
+                <a href="{{ route('comics.show', $comic->id) }}">View</a>
+                Edit
+                Delete
             </td>
         </tr>
         @endforeach
     </table>    
 
 </div>
+@endsection
