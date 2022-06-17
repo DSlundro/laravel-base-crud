@@ -2,39 +2,23 @@
 
 @section('content')
 <div class="bg-white">
-    <div class="bg-blue relative">
-        <div class="container position-relative">
-            <div class="comics-img position-absolute">
-            <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
-            <div class="text-book px-2">comic book</div>
-            <div class="text-gallery px-2">text gallery</div>
-            </div> 
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row  my-5">
-
-            <div class="col-8 mb-5">
-                <h3 class="text-uppercase">{{ $comic['title'] }}</h3>
-                <div class="row th-green my-4 m-0 ">
-                    <div class="col-9 py-3 d-flex justify-content-between ">
-                        U.S. Price : {{$comic['price']}}
-                        <div class="text-uppercase">available</div>
-                    </div>
-                    <div class="col-3 py-3 text-center">
-                        Check Avaiability
-                    </div>
-                        
-                </div>
-                <div class="col-12 m-0">
-                    {{$comic['description']}}
-                </div>
+    <div class="container pt-1">
+        <div class="row my-5">
+            <div class="col-2">
+                <div class="comics-img">
+                    <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
+                </div> 
             </div>
+            <div class="col-10 d-flex flex-column py-4">
+                <div class="d-flex flex-column gap-3">
+                    <h3 class="text-uppercase">{{ $comic['title'] }}</h3>
+                    <p>{{$comic->description}}</p>
+                </div>
 
-            <div class="col-4 text-end mb-5">
-                <h6 class="text-uppercase ">advertisement</h6>
-                <img class="rewards"src="{{asset('img/adv.jpg')}}" alt="">
+                <div class="col-12 d-flex gap-4 py-4">
+                    <div>Price: <b>$ {{$comic['price']}}</b></div>
+                    <div class="text-uppercase"><b>available</b></div>
+                </div>
             </div>
             
         </div>
@@ -42,25 +26,7 @@
     <div class="bg-light pt-4 pb-5 border-top border-bottom border-gray">
         <div class="container">
             <div class="row ">
-                <div class="col-6">
-                    <h3 class="mb-4">Talent</h3>
-                    <div class="row m-0 p-0 py-2 border-top border-gray">
-                        <div class="col-3">
-                            <h6>Art by:</h6>
-                        </div>
-
-                        <div class="row m-0 p-0 py-2 border-top border-bottom border-gray">
-                            <div class="col-3 ">
-                                <h6>Type:</h6>
-                            </div>
-                            
-                            <div class="col-9">
-                                <p>{{$comic->type}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 pb-5">
+                <div class="col pb-5">
                     <h3 class="mb-4">Specs</h3>
                     <div class="row row m-0 py-2 align-items-center border-top  border-gray">
                         <div class="col-3">
@@ -69,6 +35,16 @@
                         <div class="col-9">
                             <p class=" m-0">
                                 {{$comic['series']}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row row m-0 py-2 align-items-center border-top  border-gray">
+                        <div class="col-3">
+                            <h6>Type:</h6>
+                        </div>
+                        <div class="col-9">
+                            <p class=" m-0">
+                                {{$comic['type']}}
                             </p>
                         </div>
                     </div>

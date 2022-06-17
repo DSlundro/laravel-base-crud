@@ -12173,6 +12173,10 @@ fieldset:disabled .btn {
   }
 }
 
+.bg-primary {
+  background-color: #0282F9 !important;
+}
+
 footer {
   position: relative;
   z-index: 0;
