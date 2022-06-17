@@ -12286,21 +12286,20 @@ body .w-100 img {
 
 body .bg-dark {
   position: relative;
-  z-index: 1;
 }
 
 body .container {
   position: relative;
 }
 
-td .btn {
-  width: 100% !important;
-  margin: 7px 0;
-}
-
 td a {
   color: white !important;
   text-shadow: 2px 2px black;
+}
+
+.buttons > .btn {
+  width: 100% !important;
+  margin: 6px 0;
 }
 
 a {
@@ -12313,5 +12312,10 @@ a {
 
 .table {
   margin: 0 !important;
+}
+
+.alert {
+  padding: 2px 4px !important;
+  font-size: 12px !important;
 }
 

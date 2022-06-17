@@ -39,22 +39,48 @@
             <td>{{$comic->series}}</td>
             <td>{{$comic->type}}</td>
             <td>{{$comic->price}}</td>
-            <td>
-            <button type="button" class="btn btn-primary">
-                <a href="{{ route('comics.show', $comic->id) }}">
-                    View
-                </a>
-            </button>
-            <button type="button" class="btn btn-warning">
-                <a href="#">
-                    Edit
-                </a>
-            </button>
-            <button type="button" class="btn btn-danger">
-                <a href="">
+            <td class="buttons">
+                <!-- SHOW -->
+                <button type="button" class="btn btn-primary ">
+                    <a href="{{ route('comics.show', $comic->id) }}">
+                        View
+                    </a>
+                </button>
+                <!-- EDIT -->
+                <button type="button" class="btn btn-warning">
+                    <a href="{{route('comics.edit',$comic->id)}}">
+                        Edit
+                    </a>
+                </button>
+                <!-- DELETE -->
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete-comic-{{ $comic->id }}">
                     Delete
-                </a>
-            </button>
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="delete-comic-{{$comic->id}}" tabindex="-1" role="dialog" aria-labelledby="modelTitle-{{$comic->id}}" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Delete comic "<span class="text-secondary">{{$comic->title}}</span>" </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-secondary">
+                                Are you sure?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <form action="{{route('comics.destroy',$comic->id)}}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <input class="btn btn-danger" type="submit" value="Delete">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
             </td>
         </tr>
         @endforeach

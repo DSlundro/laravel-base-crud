@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Http\Requests\ComicRequest;
+
 use App\Comic;
+
+
 
 class ComicsController extends Controller
 {
@@ -16,7 +20,6 @@ class ComicsController extends Controller
     public function index()
     {
         $comics = Comic::all()->sortByDesc('id');
-        //dd($comics);
         return view('comics.index', compact('comics'));
     }
 
@@ -36,11 +39,12 @@ class ComicsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ComicRequest $request)
     {
-        //dd($request);
-        $data = $request->all();
-        Comic::create($data);
+
+        $validated_data = $request->validated();
+        $comic = new Comic();
+        Comic::create($validated_data);
         return redirect()->route('comics.index');
     }
 
@@ -58,34 +62,37 @@ class ComicsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Comic
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Comic $comic )
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Comic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ComicRequest $request, Comic $comic)
     {
-        //
+        $validated_data = $request->validated();
+        $comic->update($validated_data);
+        return redirect()->route('comics.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Comic
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route('comics.index');
     }
 }

@@ -19,6 +19,6 @@
         @include('partials.cards')
         @include('partials.footer')
         <!-- Scripts -->
-        <script src="{{asset('js/app.js')}}"></script>
+        <script src="{{ asset('js/app.js')}}"></script>
     </body>
 </html>
