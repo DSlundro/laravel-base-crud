@@ -101,7 +101,8 @@
                 <input 
                 type="number" 
                 name="price" 
-                id="price" 
+                id="price"
+                placeholder="select price"
                 step="0.01" max="100"
                 class="form-control @error('price') is-invalid @enderror" 
                 value="{{old('price')}}">

@@ -103,10 +103,9 @@
                 type="number" 
                 name="price" 
                 id="price" 
-                placeholder="select price" 
                 step="0.01" max="100"
-                class="form-control @error($comic->price) is-invalid @enderror" 
-                value="{{'$comic->price'}}">
+                class="form-control @error('price') is-invalid @enderror" 
+                value="{{$comic->price}}">
                 @error('price')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
@@ -121,8 +120,8 @@
                 id="description" 
                 placeholder="description" 
                 rows="5"
-                class="form-control @error($comic->description) is-invalid @enderror" 
-                value="{{'$comic->description'}}">
+                class="form-control @error('description') is-invalid @enderror">
+                {{$comic->description}}
             </textarea>
                 @error('description')
                     <div class="alert alert-danger">{{ $message }}</div>
