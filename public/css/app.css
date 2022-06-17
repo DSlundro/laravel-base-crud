@@ -12289,6 +12289,16 @@ body .container {
   position: relative;
 }
 
+td .btn {
+  width: 100% !important;
+  margin: 7px 0;
+}
+
+td a {
+  color: white !important;
+  text-shadow: 2px 2px black;
+}
+
 a {
   text-decoration: none;
 }

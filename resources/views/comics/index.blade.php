@@ -21,7 +21,7 @@
             <th>ID</th>
             <th>Img</th>
             <th>Title</th>
-            <th class="desc">Description</th>
+            <th>Description</th>
             <th>Rlease Date</th>
             <th>Series</th>
             <th>Type</th>
@@ -40,9 +40,21 @@
             <td>{{$comic->type}}</td>
             <td>{{$comic->price}}</td>
             <td>
-                <a href="{{ route('comics.show', $comic->id) }}">View</a>
-                Edit
-                Delete
+            <button type="button" class="btn btn-primary">
+                <a href="{{ route('comics.show', $comic->id) }}">
+                    View
+                </a>
+            </button>
+            <button type="button" class="btn btn-warning">
+                <a href="#">
+                    Edit
+                </a>
+            </button>
+            <button type="button" class="btn btn-danger">
+                <a href="">
+                    Delete
+                </a>
+            </button>
             </td>
         </tr>
         @endforeach
