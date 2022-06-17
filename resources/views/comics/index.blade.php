@@ -30,15 +30,15 @@
         </tr>
 
         @foreach( $comics as $comic)
-        <tr>
-            <td>{{$comic->id}}</td>
+        <tr class="">
+            <td class="fs-5 fw-bold">{{$comic->id}}</td>
             <td><img src="{{$comic->thumb}}" alt=""></td>
             <td>{{$comic->title}}</td>
-            <td class="desc">{{$comic->description}}</td>
-            <td>{{$comic->sale_date}}</td>
+            <td class="desc text-justify">{{mb_strimwidth($comic->description, 0, 300, "...")}}</td>
+            <td class="date">{{$comic->sale_date}}</td>
             <td>{{$comic->series}}</td>
             <td>{{$comic->type}}</td>
-            <td>{{$comic->price}}</td>
+            <td class="price">$ {{$comic->price}}</td>
             <td class="buttons">
                 <!-- SHOW -->
                 <button type="button" class="btn btn-primary ">
@@ -62,10 +62,10 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">Delete comic "<span class="text-secondary">{{$comic->title}}</span>" </h5>
+                                <h5 class="modal-title"><span class="text-secondary">{{$comic->title}}</span>" </h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="modal-body text-secondary">
+                            <div class="modal-body text-secondary text-center">
                                 Are you sure?
                             </div>
                             <div class="modal-footer">

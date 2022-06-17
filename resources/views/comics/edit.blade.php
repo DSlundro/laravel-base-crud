@@ -3,7 +3,7 @@
 @section('content')
 <div class="py-3 bg-primary text-white text-center">
     <div class="container">
-        <h1 class="display-3">{{$comic->title}}</h1>
+        <h1 class="display-3 fw-bold glitch">{{$comic->title}}</h1>
     </div>
 </div>
 <div class="container py-5" style="max-width: 700px !important;">
@@ -120,9 +120,7 @@
                 id="description" 
                 placeholder="description" 
                 rows="5"
-                class="form-control @error('description') is-invalid @enderror">
-                {{$comic->description}}
-            </textarea>
+                class="form-control @error('description') is-invalid @enderror">{{$comic->description}}</textarea>
                 @error('description')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror

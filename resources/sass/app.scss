@@ -5,13 +5,17 @@
 @import 'partials/cards';
 @import 'partials/body';
 @import 'partials/comics';
+@import 'partials/comic';
+@import 'partials/animations';
+
 
 a{
     text-decoration: none;
 }
 
 .active{
-    border-bottom: 2px solid $primary;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid $primary;
 }
 .table{
     margin: 0 !important;

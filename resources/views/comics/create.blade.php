@@ -3,7 +3,7 @@
 @section('content')
 <div class="py-3 bg-primary text-white text-center">
     <div class="container">
-        <h1 class="display-3">New Comic</h1>
+        <h1 class="display-3 fw-bold glitch">Add New Comic</h1>
     </div>
 </div>
 <div class="container py-5" style="max-width: 700px !important;">
@@ -27,7 +27,7 @@
                 type="text" 
                 name="title" 
                 id="title" 
-                placeholder="select title" 
+                placeholder="The Dark Knight" 
                 class="form-control @error('title') is-invalid @enderror" 
                 value="{{old('title')}}">
                 @error('title')
@@ -43,7 +43,7 @@
                 name="series" 
                 id="series" 
 
-                placeholder="select series" 
+                placeholder="Batman" 
                 class="form-control @error('series') is-invalid @enderror" 
                 value="{{old('series')}}">
                 @error('series')
@@ -53,12 +53,12 @@
         </div>
         <div class="form-group">
         <div class="mb-3">
-                <label for="thumb" class="form-label">Title</label>
+                <label for="thumb" class="form-label">Image</label>
                 <input 
                 type="text" 
                 name="thumb" 
                 id="thumb" 
-                placeholder="select thumb" 
+                placeholder="https://..." 
                 class="form-control @error('thumb') is-invalid @enderror" 
                 value="{{old('thumb')}}">
                 @error('thumb')
@@ -82,12 +82,12 @@
         </div>
         <div class="form-group">
             <div class="mb-3">
-            <label for="type" class="form-label">Title</label>
+            <label for="type" class="form-label">Type</label>
                 <input 
                 type="text" 
                 name="type" 
                 id="type" 
-                placeholder="select type" 
+                placeholder="Comic book" 
                 class="form-control @error('type') is-invalid @enderror" 
                 value="{{old('type')}}">
                 @error('type')
@@ -102,7 +102,7 @@
                 type="number" 
                 name="price" 
                 id="price"
-                placeholder="select price"
+                placeholder="9.99"
                 step="0.01" max="100"
                 class="form-control @error('price') is-invalid @enderror" 
                 value="{{old('price')}}">
@@ -113,12 +113,12 @@
         </div>
         <div class="form-group">
             <div class="mb-3">
-                <label for="description" class="form-label">description</label>
+                <label for="description" class="form-label">Description</label>
                 <textarea 
                 type="text" 
                 name="description" 
                 id="description" 
-                placeholder="description" 
+                placeholder="Write something..." 
                 rows="5"
                 class="form-control @error('description') is-invalid @enderror" 
                 value="{{old('description')}}">

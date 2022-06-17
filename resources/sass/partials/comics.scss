@@ -1,9 +1,23 @@
-td a{
-    color: white !important;
-    text-shadow: 2px 2px black;
+td {
+    max-height: 150px;
+    
+    
+    a{
+        color: white !important;
+        text-shadow: 2px 2px black;
+    }
 }
-
+.price, .date{
+    white-space: nowrap !important;
+}
+.desc{
+    text-align: justify !important;
+}
 .buttons>.btn{
     width: 100% !important;
     margin: 6px 0;
+}
+
+table img{
+    width: 100px;
 }

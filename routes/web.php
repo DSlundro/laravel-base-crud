@@ -2,7 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', 'PageController@index')->name('home');
+Route::get('/', 'PageController@index')->name('app');
+
+Route::get('/', function(){
+    return view('comics.home');
+})->name('home');
 
 // INDEX
 Route::get('/comics', 'ComicsController@index')->name('comics.index');
