@@ -1,0 +1,15 @@
+body{
+    .w-100{
+        position: relative;
+        height: 400px;
+        img{
+            margin: auto;
+            width: 100%;
+            position: absolute;
+        }
+    }
+    .bg-dark{position: relative; z-index: 1;}
+    .container{
+    position: relative;
+    }
+}

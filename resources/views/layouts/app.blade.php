@@ -4,27 +4,20 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>CRUD</title>
+        <title>DC Comics - CRUD</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
         <!-- Styles -->
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
     </head>
     <body>
-
-        <header>
-            <nav class="navbar navbar-expand navbar-light bg-light d-flex justify-content-center">
-                <div class="nav navbar-nav">
-                    <a class="nav-item nav-link active" href="{{route('home')}}">Home <span class="visually-hidden">(current)</span></a>
-                    <a class="nav-item nav-link" href="{{route('comics.index')}}">Comics</a>
-                </div>
-            </nav>
-        </header>
-
-        <main>
+        @include('partials.header')
+        @include('partials.jumbotron')
+        <main class="bg-dark">
             @yield('content')
         </main>
-
+        @include('partials.cards')
+        @include('partials.footer')
         <!-- Scripts -->
         <script src="{{asset('js/app.js')}}"></script>
     </body>

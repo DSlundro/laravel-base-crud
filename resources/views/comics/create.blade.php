@@ -1,14 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="p-5 bg-success text-white">
+<div class="py-3 bg-primary text-white text-center">
     <div class="container">
-        <h1 class="display-3">Create Comics</h1>
-        <p class="lead">Compile form for create a comic</p>
+        <h1 class="display-3">New Comic</h1>
     </div>
 </div>
 <div class="container py-5" style="max-width: 700px !important;">
-    <form class="bg-light mt-5 p-3" method="post" action="{{route('comics.store')}}">
+    <form class="bg-light p-3" method="post" action="{{route('comics.store')}}">
     @csrf
         <div class="form-group">
             <div class="mb-3">
@@ -52,7 +51,7 @@
                 <textarea type="text" name="description" id="description" class="form-control" placeholder="description" rows="5"></textarea>
             </div>
         </div>
-        <button type="submit" class="btn btn-success">Add New Comic</button>
+        <button type="submit" class="btn btn-primary">Add New Comic</button>
     </form>
 </div>
 @endsection

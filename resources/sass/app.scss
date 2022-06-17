@@ -1,6 +1,17 @@
 //
 @import 'bootstrap';
+@import 'variables';
+@import 'partials/footer';
+@import 'partials/cards';
+@import 'partials/body';
 
-img{
-    width: 70px;
+a{
+    text-decoration: none;
+}
+
+.active{
+    border-bottom: 2px solid $primary;
+}
+.table{
+    margin: 0 !important;
 }

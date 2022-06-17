@@ -12173,7 +12173,131 @@ fieldset:disabled .btn {
   }
 }
 
-img {
-  width: 70px;
+footer {
+  position: relative;
+  z-index: 0;
+}
+
+footer .f-bg {
+  background-image: url("/img/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+footer .f-btn {
+  color: white;
+  font-weight: bold;
+  border: 3px solid #0282F9;
+}
+
+footer .f-btn:hover {
+  color: rgb(189, 187, 187);
+  border: 3px solid #3ba0ff;
+  box-shadow: 0 0 3px white;
+}
+
+footer li {
+  list-style: none;
+  color: gray;
+}
+
+footer li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+footer h4,
+footer .h4 {
+  font-weight: bold;
+}
+
+footer .dc-bg img {
+  width: 600px;
+  position: absolute;
+  transform: translate(0, -145px);
+}
+
+footer .contact {
+  position: relative;
+  z-index: 1;
+  background-color: #303030;
+  width: 100%;
+}
+
+footer .contact .follow-us a {
+  color: #0282F9;
+}
+
+footer .contact .follow-us a:hover {
+  color: #3ba0ff;
+}
+
+footer .contact .col-9 {
+  height: 100px;
+}
+
+footer .contact .col-9 .social {
+  position: relative;
+}
+
+footer .contact .col-9 .social img {
+  width: 22px;
+}
+
+footer .contact .col-9 .social img:hover {
+  text-shadow: 0 0 2px white;
+}
+
+footer .contact .col-9 .social a {
+  padding: 0 5px;
+}
+
+section {
+  position: relative;
+  z-index: 99;
+  background-color: #0282F9;
+}
+
+section img {
+  width: 40px;
+}
+
+section p {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: white;
+  padding-left: 7px;
+}
+
+body .w-100 {
+  position: relative;
+  height: 400px;
+}
+
+body .w-100 img {
+  margin: auto;
+  width: 100%;
+  position: absolute;
+}
+
+body .bg-dark {
+  position: relative;
+  z-index: 1;
+}
+
+body .container {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+.active {
+  border-bottom: 2px solid #0282F9;
+}
+
+.table {
+  margin: 0 !important;
 }
 
