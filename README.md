@@ -1,3 +1,15 @@
+
+## Comics Page
+![Immagine 2022-06-17 213052](https://user-images.githubusercontent.com/97912982/174408394-8a3f6882-8319-451e-b7e8-e6fe4e84f8ec.png)
+
+## Single Comic Page
+![Immagine 2022-06-17 213138](https://user-images.githubusercontent.com/97912982/174408397-1c15e0a3-d47c-4c6e-8250-25dc58966d63.png)
+
+## Add New Comic
+![Immagine 2022-06-17 213119](https://user-images.githubusercontent.com/97912982/174408399-14fa02a0-c267-4a53-8042-67456d60cc4a.png)    
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
