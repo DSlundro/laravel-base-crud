@@ -16,6 +16,36 @@
         </div>
     </div>
 
+    <div class="alerts">
+        <div class="d-flex justify-content-center">
+            <div class="text-center" style="width: 200px;">
+                @if (session('created'))
+                <div class="alert alert-success">
+                    {{ session('created') }}
+                </div>
+                @endif
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="text-center" style="width: 200px;">
+                @if (session('edited'))
+                <div class="alert alert-success">
+                    {{ session('edited') }}
+                </div>
+                @endif
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="text-center" style="width: 200px;">
+                @if (session('deleted'))
+                <div class="alert alert-danger">
+                    {{ session('deleted') }}
+                </div>
+                @endif
+            </div>
+        </div>
+    </div>
+
     <table class="table text-white">
         <tr>
             <th>ID</th>

@@ -45,7 +45,7 @@ class ComicsController extends Controller
         $validated_data = $request->validated();
         $comic = new Comic();
         Comic::create($validated_data);
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('created', 'Post created successfully');
     }
 
     /**
@@ -81,7 +81,7 @@ class ComicsController extends Controller
     {
         $validated_data = $request->validated();
         $comic->update($validated_data);
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('edited', 'Post modified successfully');
     }
 
     /**
@@ -93,6 +93,6 @@ class ComicsController extends Controller
     public function destroy(Comic $comic)
     {
         $comic->delete();
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('deleted', 'Post deleted successfully');
     }
 }

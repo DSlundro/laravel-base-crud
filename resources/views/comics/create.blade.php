@@ -121,8 +121,7 @@
                 placeholder="Write something..." 
                 rows="5"
                 class="form-control @error('description') is-invalid @enderror" 
-                value="{{old('description')}}">
-            </textarea>
+                value="{{old('description')}}"></textarea>
                 @error('description')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
